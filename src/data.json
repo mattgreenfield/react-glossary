@@ -1,0 +1,83 @@
+[
+  {
+    "_id": "255272734920016402",
+    "term": "estimated time of arrival",
+    "description": "What time we thing it's going to turn up. Can change",
+    "abbreviation": "ETA"
+  },
+  {
+    "_id": "255272920677351954",
+    "term": "pull request",
+    "description": "A dev team thing",
+    "abbreviation": "PR"
+  },
+  {
+    "_id": "255273673366176274",
+    "term": "sick day",
+    "description": "when somebodys sick"
+  },
+  {
+    "_id": "255275131235992083",
+    "term": "Pay as you earn",
+    "description": "a type of tax"
+  },
+  {
+    "_id": "256022378419585555",
+    "term": "End of play",
+    "description": "The end of the working day",
+    "abbreviation": "EOP"
+  },
+  {
+    "_id": "256022902654108180",
+    "term": "End to end test",
+    "description": "Tests that click real dom elements in a headless browser",
+    "abbreviation": "e2e"
+  },
+  {
+    "_id": "256022998572597779",
+    "term": "Speed through water",
+    "description": "The speed' that it would be moving if the waves and currents weren't there",
+    "abbreviation": "stw"
+  },
+  {
+    "_id": "256023432282505748",
+    "term": "continuous intergration",
+    "description": "Continually running tasks",
+    "abbreviation": "CI"
+  },
+  {
+    "_id": "256023525751521811",
+    "term": "Closure",
+    "description": "Closures 'are functions that refer to independent (free) variables. In other words, the function defined in the closure ‘remembers’ the environment in which it was created."
+  },
+  {
+    "_id": "256023835479900691",
+    "term": "Currying",
+    "description": "Currying 'is a process in functional programming in which we can transform a function with multiple arguments into a sequence of nesting functions. It returns a new function that expects the next argument inline."
+  },
+  {
+    "_id": "256024138255172115",
+    "term": "Scope",
+    "description": ""
+  },
+  {
+    "_id": "256024251443708435",
+    "term": "Accessible Rich Internet Applications",
+    "description": "A W3C spe'cification for adding semantics and other metadata to HTML to cater to users of assistive technology."
+  },
+  {
+    "_id": "256083014474269204",
+    "term": "P45",
+    "description": "When you leave a job it tells you how much tax you've paid"
+  },
+  {
+    "_id": "256083214407303700",
+    "term": "P60",
+    "description": "Tells you how much tax you've paid at the end of the year"
+  },
+  {
+    "_id": "256476407388963347",
+    "term": "Zoo",
+    "description": "Where animals live"
+  }
+]

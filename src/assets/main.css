@@ -1,12 +1,3 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -9581,11 +9572,11 @@ video {
   left: 0;
 }
 
-.inset-auto {
-  top: auto;
-  right: auto;
-  bottom: auto;
-  left: auto;
+.inset-60 {
+  top: 60px;
+  right: 60px;
+  bottom: 60px;
+  left: 60px;
 }
 
 .inset-y-0 {
@@ -9598,14 +9589,14 @@ video {
   left: 0;
 }
 
-.inset-y-auto {
-  top: auto;
-  bottom: auto;
+.inset-y-60 {
+  top: 60px;
+  bottom: 60px;
 }
 
-.inset-x-auto {
-  right: auto;
-  left: auto;
+.inset-x-60 {
+  right: 60px;
+  left: 60px;
 }
 
 .top-0 {
@@ -9624,20 +9615,20 @@ video {
   left: 0;
 }
 
-.top-auto {
-  top: auto;
+.top-60 {
+  top: 60px;
 }
 
-.right-auto {
-  right: auto;
+.right-60 {
+  right: 60px;
 }
 
-.bottom-auto {
-  bottom: auto;
+.bottom-60 {
+  bottom: 60px;
 }
 
-.left-auto {
-  left: auto;
+.left-60 {
+  left: 60px;
 }
 
 .resize-none {
@@ -23447,11 +23438,11 @@ video {
     left: 0;
   }
 
-  .sm\:inset-auto {
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
+  .sm\:inset-60 {
+    top: 60px;
+    right: 60px;
+    bottom: 60px;
+    left: 60px;
   }
 
   .sm\:inset-y-0 {
@@ -23464,14 +23455,14 @@ video {
     left: 0;
   }
 
-  .sm\:inset-y-auto {
-    top: auto;
-    bottom: auto;
+  .sm\:inset-y-60 {
+    top: 60px;
+    bottom: 60px;
   }
 
-  .sm\:inset-x-auto {
-    right: auto;
-    left: auto;
+  .sm\:inset-x-60 {
+    right: 60px;
+    left: 60px;
   }
 
   .sm\:top-0 {
@@ -23490,20 +23481,20 @@ video {
     left: 0;
   }
 
-  .sm\:top-auto {
-    top: auto;
+  .sm\:top-60 {
+    top: 60px;
   }
 
-  .sm\:right-auto {
-    right: auto;
+  .sm\:right-60 {
+    right: 60px;
   }
 
-  .sm\:bottom-auto {
-    bottom: auto;
+  .sm\:bottom-60 {
+    bottom: 60px;
   }
 
-  .sm\:left-auto {
-    left: auto;
+  .sm\:left-60 {
+    left: 60px;
   }
 
   .sm\:resize-none {
@@ -37270,11 +37261,11 @@ video {
     left: 0;
   }
 
-  .md\:inset-auto {
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
+  .md\:inset-60 {
+    top: 60px;
+    right: 60px;
+    bottom: 60px;
+    left: 60px;
   }
 
   .md\:inset-y-0 {
@@ -37287,14 +37278,14 @@ video {
     left: 0;
   }
 
-  .md\:inset-y-auto {
-    top: auto;
-    bottom: auto;
+  .md\:inset-y-60 {
+    top: 60px;
+    bottom: 60px;
   }
 
-  .md\:inset-x-auto {
-    right: auto;
-    left: auto;
+  .md\:inset-x-60 {
+    right: 60px;
+    left: 60px;
   }
 
   .md\:top-0 {
@@ -37313,20 +37304,20 @@ video {
     left: 0;
   }
 
-  .md\:top-auto {
-    top: auto;
+  .md\:top-60 {
+    top: 60px;
   }
 
-  .md\:right-auto {
-    right: auto;
+  .md\:right-60 {
+    right: 60px;
   }
 
-  .md\:bottom-auto {
-    bottom: auto;
+  .md\:bottom-60 {
+    bottom: 60px;
   }
 
-  .md\:left-auto {
-    left: auto;
+  .md\:left-60 {
+    left: 60px;
   }
 
   .md\:resize-none {
@@ -51093,11 +51084,11 @@ video {
     left: 0;
   }
 
-  .lg\:inset-auto {
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
+  .lg\:inset-60 {
+    top: 60px;
+    right: 60px;
+    bottom: 60px;
+    left: 60px;
   }
 
   .lg\:inset-y-0 {
@@ -51110,14 +51101,14 @@ video {
     left: 0;
   }
 
-  .lg\:inset-y-auto {
-    top: auto;
-    bottom: auto;
+  .lg\:inset-y-60 {
+    top: 60px;
+    bottom: 60px;
   }
 
-  .lg\:inset-x-auto {
-    right: auto;
-    left: auto;
+  .lg\:inset-x-60 {
+    right: 60px;
+    left: 60px;
   }
 
   .lg\:top-0 {
@@ -51136,20 +51127,20 @@ video {
     left: 0;
   }
 
-  .lg\:top-auto {
-    top: auto;
+  .lg\:top-60 {
+    top: 60px;
   }
 
-  .lg\:right-auto {
-    right: auto;
+  .lg\:right-60 {
+    right: 60px;
   }
 
-  .lg\:bottom-auto {
-    bottom: auto;
+  .lg\:bottom-60 {
+    bottom: 60px;
   }
 
-  .lg\:left-auto {
-    left: auto;
+  .lg\:left-60 {
+    left: 60px;
   }
 
   .lg\:resize-none {
@@ -64916,11 +64907,11 @@ video {
     left: 0;
   }
 
-  .xl\:inset-auto {
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
+  .xl\:inset-60 {
+    top: 60px;
+    right: 60px;
+    bottom: 60px;
+    left: 60px;
   }
 
   .xl\:inset-y-0 {
@@ -64933,14 +64924,14 @@ video {
     left: 0;
   }
 
-  .xl\:inset-y-auto {
-    top: auto;
-    bottom: auto;
+  .xl\:inset-y-60 {
+    top: 60px;
+    bottom: 60px;
   }
 
-  .xl\:inset-x-auto {
-    right: auto;
-    left: auto;
+  .xl\:inset-x-60 {
+    right: 60px;
+    left: 60px;
   }
 
   .xl\:top-0 {
@@ -64959,20 +64950,20 @@ video {
     left: 0;
   }
 
-  .xl\:top-auto {
-    top: auto;
+  .xl\:top-60 {
+    top: 60px;
   }
 
-  .xl\:right-auto {
-    right: auto;
+  .xl\:right-60 {
+    right: 60px;
   }
 
-  .xl\:bottom-auto {
-    bottom: auto;
+  .xl\:bottom-60 {
+    bottom: 60px;
   }
 
-  .xl\:left-auto {
-    left: auto;
+  .xl\:left-60 {
+    left: 60px;
   }
 
   .xl\:resize-none {
