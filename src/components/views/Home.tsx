@@ -1,7 +1,7 @@
-import React, { FunctionComponent, useEffect, useRef } from "react";
+import React, { FunctionComponent, useEffect, useRef, useState } from "react";
 import Layout from "../layouts/Default";
-// import Button from "../atoms/Button";
-import InputText from "../atoms/InputText";
+import { useLocation } from "react-router";
+
 import AZNav from "../AZNav";
 import allTerms from "../../data.json";
 
@@ -13,18 +13,35 @@ interface Term {
   tags?: Object;
 }
 
+// A custom hook that builds on useLocation to parse
+// the query string for you.
+function useQuery() {
+  return new URLSearchParams(useLocation().search);
+}
+
 const Home: FunctionComponent = () => {
-  const [termsByLetter, setTermsByLetter] = React.useState(
+  const [termsByLetter, setTermsByLetter] = useState(
     {} as { [key: string]: Term[] }
   );
-  const [search, setSearch] = React.useState("");
-  const [currentLetter, setCurrentLetter] = React.useState("A");
+
+  const [currentLetter, setCurrentLetter] = useState("A");
+  const searchTerm = useQuery().get("search");
 
   /**
    * Takes 'allTerms' and groups them by letter
    */
   useEffect(() => {
-    const groupedByLetter = allTerms.reduce((acc, term) => {
+    /**
+     * Filter all terms by the URL search query
+     */
+    let filteredTerms = allTerms;
+    if (searchTerm) {
+      filteredTerms = allTerms.filter((t) =>
+        t.term.toLowerCase().includes(searchTerm)
+      );
+    }
+
+    const groupedByLetter = filteredTerms.reduce((acc, term) => {
       const firstLetter = term.term.charAt(0).toUpperCase();
       if (acc[firstLetter]) {
         acc[firstLetter].push(term);
@@ -34,14 +51,18 @@ const Home: FunctionComponent = () => {
       return acc;
     }, {} as { [key: string]: Term[] });
 
+    /**
+     * Sort the groups A-Z
+     */
     const ordered = {} as { [key: string]: Term[] };
     Object.keys(groupedByLetter)
       .sort()
       .forEach((key) => {
         ordered[key] = groupedByLetter[key];
       });
+
     setTermsByLetter(ordered);
-  }, []);
+  }, [searchTerm]);
   // }, [allTerms]);
 
   /**
@@ -49,34 +70,18 @@ const Home: FunctionComponent = () => {
    */
   const viewPortHeight = window.innerHeight;
   const observer = new IntersectionObserver(
-    // Attempting to fix the issue when scrolling fast as there's more than one el in 'visibleHeaders'
-    // no avail
-    // (visibleHeaders) => {
-    //   const orderedAZ = visibleHeaders.sort(
-    //     (a, b) => a.boundingClientRect.y - b.boundingClientRect.y
-    //   );
-    //   const [e] = orderedAZ;
-    //   console.log(
-    //     orderedAZ.length,
-    //     orderedAZ.map((e) => e.target.innerHTML)
-    //   );
-    //   // },
     ([e]) => {
-      // const intersectionRatio = e.intersectionRatio;
-      // const isIntersecting = e.isIntersecting;
-      const letter = e.target.innerHTML;
-      // console.log(letter, e);
-      const pixelsFromTop = e.boundingClientRect.y;
-      console.log(letter, pixelsFromTop);
+      const isIntersecting = e.isIntersecting;
 
-      // If it's not full visible AND not fully hidden, then it's sticky, becuase of the -1px hack we have
-      if (pixelsFromTop === 0) {
+      if (isIntersecting) {
+        const letter = e.target.innerHTML;
         setCurrentLetter(letter);
       }
     },
     {
       threshold: [1],
-      rootMargin: `0px 0px -${viewPortHeight - 39}px 0px`,
+      // Rather than the whole viewport, only observe the 39px box where the sticky items sit
+      rootMargin: `-63px 0px -${viewPortHeight - (39 + 63)}px 0px`,
     }
   );
 
@@ -106,25 +111,22 @@ const Home: FunctionComponent = () => {
   return (
     <Layout>
       <>
-        <InputText
-          label="Search"
-          value={search}
-          onChange={(event) => setSearch(event.target.value)}
+        <AZNav
+          currentLetter={currentLetter}
+          validLetters={Object.keys(termsByLetter)}
         />
-        <AZNav currentLetter={currentLetter} />
-        <ol type="A">
+        <ol type="A" style={{ marginTop: "-565px", minHeight: "565px" }}>
           {Object.keys(termsByLetter).map((letter) => (
-            <li className="relative" key={letter}>
+            <li className="relative" key={letter} id={letter}>
               <h3
                 ref={(element) => (headerRefs.current[letter] = element)}
-                className="text-xl font-black sticky top-0 p-1 bg-white border-solid border-b border-black"
-                // style={{ top: "-1px", paddingTop: "1px" }}
+                className="text-xl font-black sticky top-app-header p-1 bg-white border-solid border-b border-black"
               >
                 {letter}
               </h3>
               <ul>
                 {termsByLetter[letter].map((term) => (
-                  <li className="mb-6">
+                  <li className="mb-6" key={term._id}>
                     <h4 className="text-2xl">{term.term}</h4>
                     <div>{term.abbreviation}</div>
                     <p>{term.description}</p>

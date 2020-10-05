@@ -46,6 +46,31 @@
     "abbreviation": "CI"
   },
   {
+    "_id": "236023432282505741",
+    "term": "Monkey",
+    "description": "an animal that lives in the trees"
+  },
+  {
+    "_id": "236023132282505741",
+    "term": "Memoise",
+    "description": "remember something"
+  },
+  {
+    "_id": "136023432282505741",
+    "term": "Liquid",
+    "description": "a templating language"
+  },
+  {
+    "_id": "136023432282504741",
+    "term": "Prototype",
+    "description": "A rough design for testing purposes"
+  },
+  {
+    "_id": "136023422282505741",
+    "term": "Prototype",
+    "description": "A property on an object to set defaults"
+  },
+  {
     "_id": "256023525751521811",
     "term": "Closure",
     "description": "Closures 'are functions that refer to independent (free) variables. In other words, the function defined in the closure ‘remembers’ the environment in which it was created."
@@ -63,6 +88,7 @@
   {
     "_id": "256024251443708435",
     "term": "Accessible Rich Internet Applications",
+    "abbreviation": "ARIA",
     "description": "A W3C spe'cification for adding semantics and other metadata to HTML to cater to users of assistive technology."
   },
   {
@@ -74,6 +100,18 @@
     "_id": "256083214407303700",
     "term": "P60",
     "description": "Tells you how much tax you've paid at the end of the year"
+  },
+  {
+    "_id": "256086214407303700",
+    "term": "User Experience",
+    "abbreviation": "UX",
+    "description": "Thinking about how the user of your website uses it"
+  },
+  {
+    "_id": "256046214427303700",
+    "term": "User Interface",
+    "abbreviation": "UI",
+    "description": "The actual parts of a page (e.g. buttons and images) and how they look"
   },
   {
     "_id": "256476407388963347",
